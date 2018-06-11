@@ -1,0 +1,25 @@
+<div class="container color-dark">
+  <div class="col">
+  <p> This is a First line</p>
+  </div>
+  <div class="col">
+    <p> This is a Secand line ({{itemCount}})</p>
+  </div>
+</div>
+
+<div class="container color-light">
+    <div class="col">
+   <p class="sm"> This is for First Line whatever you can do?</p>
+   <form>
+    <input type="text" class="txt" name="item" placeholder="Dream Goals." [(ngModel)]="myLifegoal">
+    <br><span>{{myLifegoal}}</span>
+    <input type="submit" [value]="btnText" class="btn" (click)="addItem()">
+
+   </form>
+    </div>
+    <div class="col">
+      <p class="life-container" *ngFor="let goal of goals; let i=index" (click)="removeItem(i)"> 
+        {{goal}}
+      </p>
+    </div>
+  </div>

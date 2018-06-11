@@ -1,0 +1,30 @@
+<div class="form_container">
+    <form >
+       <header>Customer Details</header>
+       <label>FirstName <span>*</span></label>
+       <input type="text" name="fname" />
+       <label>LastName <span>*</span></label>
+       <input type="text" name="lname" />
+       <label>Address <span></span></label>
+       <input type="text" name="address" />
+       <label>Phone No <span></span></label>
+       
+       <input type="text" name="phoneno" />
+       <p> Examples</p>
+       <input #box (keyup)="0">
+        <p>{{box.value}}</p>
+        <input #box (keyup.enter)="onEnter(box.value)">
+    <p>{{value}}</p>
+    <input #box (keyup.enter)="update(box.value)"  (blur)="update(box.value)">
+    <input #newHero (keyup.enter)="addHero(newHero.value)" (blur)="addHero(newHero.value); newHero.value='' ">
+
+  <button (click)="addHero(newHero.value)">Add</button>
+  <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
+    <p>{{value}}</p>
+      
+       <button (click)="onClickMe()" value="Submit">Submit</button>
+      
+    </form>
+    {{clickMessage}}
+ </div>
+ 
